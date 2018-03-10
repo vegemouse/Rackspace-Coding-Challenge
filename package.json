@@ -1,7 +1,7 @@
 {
-  "name": "react-starter",
+  "name": "rackspace-coding-challenge",
   "version": "1.0.0",
-  "description": "Very minimal starter for React applications",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --progress --colors --env.env=dev",
@@ -14,10 +14,9 @@
   "dependencies": {
     "jest-cli": "^22.4.2",
     "react": "^16.2.0",
-    "react-delay-render": "^0.1.2",
     "react-dom": "^16.2.0",
-    "react-imported-component": "^4.0.1",
-    "react-router-dom": "^4.2.2"
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
