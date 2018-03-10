@@ -1,20 +1,15 @@
-import { AppContainer } from 'react-hot-loader';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import reduxThunk from 'redux-thunk';
 
+import reducers from './reducers';
 import App from './components/App/App';
 
-const render = Component =>
-  ReactDOM.render(
-    <AppContainer>
-      <Component />
-    </AppContainer>,
-    document.getElementById('app')
-  );
+const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
-render(App);
-
-// HMR - SEE https://github.com/webpack/webpack-dev-server/issues/100
-if(module.hot) {
-  module.hot.accept();
-}
+ReactDOM.render(
+  <Provider store={store}><App /></Provider>,
+  document.getElementById('app')
+);

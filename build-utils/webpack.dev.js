@@ -9,7 +9,7 @@ module.exports = {
   mode: 'development',
   entry: {
     vendor: [], // Vendor modules here
-    app: ['react-hot-loader/patch', `${commonPaths.appEntry}/index.js`]
+    app: [`${commonPaths.appEntry}/index.js`]
   },
   output: {
     filename: '[name].[hash].js'
@@ -49,14 +49,10 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
   devServer: {
     host: 'localhost',
     port: port,
     historyApiFallback: true,
-    open: true,
-    hot: true
+    open: true
   }
 };

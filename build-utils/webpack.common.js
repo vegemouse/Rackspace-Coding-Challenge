@@ -4,9 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const commonPaths = require('./common-paths');
 
 const config = {
-  // entry: {
-  //   vendor: [], // Vendor modules go here
-  // },
   output: {
     path: commonPaths.outputPath,
     publicPath: '/'
