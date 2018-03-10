@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import * as actions from '../../actions';
+import Header from '../Header/Header';
 import Post from '../Post/Post';
 
 class Table extends Component {
@@ -19,10 +20,10 @@ class Table extends Component {
       <table>
         <thead>
           <tr>
-            <th onClick={ () => this.props.sortPosts('id') }>ID</th>
-            <th onClick={ () => this.props.sortPosts('userId') }>User ID</th>
-            <th onClick={ () => this.props.sortPosts('title') }>Title</th>
-            <th onClick={ () => this.props.sortPosts('body') }>Body</th>
+            <Header value="id" label="ID" />
+            <Header value="userId" label="User ID" />
+            <Header value="title" label="Title" />
+            <Header value="body" label="Body" />
           </tr>
         </thead>
         <tbody>
