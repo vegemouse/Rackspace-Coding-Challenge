@@ -5,7 +5,7 @@ import * as actions from '../../actions';
 import Table from '../Table/Table';
 import './App.scss';
 
-class App extends Component {
+export class App extends Component {
   componentDidMount() {
     this.props.fetchPosts();
   }

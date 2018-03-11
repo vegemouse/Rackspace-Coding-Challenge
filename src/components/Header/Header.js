@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import './Header.scss';
 
-class Header extends Component {
+export class Header extends Component {
   renderArrow() {
     if (this.props.posts.sortedBy === this.props.value) {
       return (

@@ -6,7 +6,7 @@ import Header from '../Header/Header';
 import Post from '../Post/Post';
 import './Table.scss';
 
-class Table extends Component {
+export class Table extends Component {
   renderPosts() {
     if (this.props.posts.posts.length > 0) {
       return this.props.posts.posts.map(post => {

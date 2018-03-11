@@ -14,6 +14,7 @@ module.exports = {
     // We want to create the JavaScript bundles under a
     // 'static' directory
     filename: 'static/[name].[hash].js',
+    publicPath: './'
   },
   // Change to production source maps
   devtool: 'source-map',
