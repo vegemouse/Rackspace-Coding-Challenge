@@ -1,0 +1,58 @@
+@import '../variables.scss';
+
+th {
+  letter-spacing: 1.5px;
+  color: white;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  display: inline-block;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.arrow {
+  figure {
+    display: inline-block;
+    transition: transform 150ms ease-in, opacity 150ms ease-in;
+    margin: 0;
+  }
+  .desc {
+    transform: rotateZ(-180deg);
+  }
+  .hidden {
+    opacity: 0;
+  }
+}
+
+.id {
+  font-family: $header-font;
+  width: $id-width;
+  margin-left: 2px;
+}
+
+.userId {
+  font-family: $header-font;
+  width: $user-width;
+}
+
+.title {
+  width: $title-width;
+  text-align: left;
+}
+
+.body {
+  width: $body-width;
+  margin-left: -7px;
+  text-align: left;
+}
+
+th {
+  span {
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 100ms ease-in;
+  }
+  .active {
+    border-bottom: 2px solid $red;
+  }
+}

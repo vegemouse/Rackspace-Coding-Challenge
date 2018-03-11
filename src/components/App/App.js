@@ -12,8 +12,9 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="app">
         <Table />
+        <span className="credit">Created by Maxwell Cady for Rackspace</span>
       </div>
     )
   }

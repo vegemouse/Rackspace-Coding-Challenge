@@ -1,0 +1,27 @@
+@import '../variables.scss';
+
+.post {
+  min-height: 110px;
+  &-id {
+    width: $id-width;
+    @include fullcell($grey, white);
+  }
+  &-user-id {
+    width: $user-width;
+    @include circle($red, white);
+  }
+  &-title {
+    text-transform: capitalize;
+    width: $title-width;
+  }
+  &-body {
+    width: $body-width;
+  }
+  &:nth-child(odd) {
+    background-color: #eee;
+  }
+}
+
+td {
+  display: inline-block;
+}
