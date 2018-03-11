@@ -6,7 +6,7 @@ const commonPaths = require('./common-paths');
 const config = {
   output: {
     path: commonPaths.outputPath,
-    publicPath: '/'
+    publicPath: './'
   },
   module: {
     rules: [

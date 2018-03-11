@@ -12,7 +12,7 @@ module.exports = {
     app: [`${commonPaths.appEntry}/index.js`]
   },
   output: {
-    filename: '[name].[hash].js'
+    filename: 'bundle.[hash].js'
   },
   devtool: 'inline-source-map',
   module: {
