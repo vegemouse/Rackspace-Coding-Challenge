@@ -29,4 +29,4 @@ To build the application for production
 
 Testing
 
-`npm run test`
+`npm test`
