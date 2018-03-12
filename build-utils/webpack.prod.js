@@ -11,8 +11,6 @@ module.exports = {
     app: [`${commonPaths.appEntry}/index.js`]
   },
   output: {
-    // We want to create the JavaScript bundles under a
-    // 'static' directory
     filename: 'static/[name].[hash].js',
     publicPath: './'
   },
@@ -36,10 +34,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        // We configure 'Extract Text Plugin'
         use: ExtractTextPlugin.extract({
-          // loader that should be used when the
-          // CSS is not extracted
           fallback: 'style-loader',
           use: [
             {
@@ -51,15 +46,10 @@ module.exports = {
                 // to @import(ed) resources
                 importLoaders: 1,
                 camelCase: true,
-                // Create source maps for CSS files
                 sourceMap: true
               }
             },
             {
-              // PostCSS will run before css-loader and will
-              // minify and autoprefix our CSS rules. We are also
-              // telling it to only use the last 2
-              // versions of the browsers when autoprefixing
               loader: 'postcss-loader',
               options: {
                 config: {
@@ -111,7 +101,6 @@ module.exports = {
     ]
   },
   plugins: [
-    // Create the stylesheet under 'styles' directory
     new ExtractTextPlugin({
       filename: 'styles/styles.[contenthash].css',
       allChunks: true
